@@ -1,0 +1,80 @@
+.experiencia {
+  @include display(grid);
+  grid-template-columns: repeat(2,1fr);
+  /*gap: 10rem;*/
+
+  .subtitulo{
+    color: $font-color-ligth-gray;
+  }
+
+  .xp-text{
+    font-size: 2.4rem;
+    line-height: 1.33;
+    max-width:  40ch;
+    margin-bottom: 6rem;
+    color: $font-color-gray;
+
+    strong{
+      color: $font-color;
+    }
+  }
+
+  .empresa{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 2rem;
+    background: $font-color-white;
+    margin-bottom: 2rem;
+    border-radius: .4rem;
+    gap: 1rem 2rem;
+    position: relative;
+
+    &-ano{
+      position: absolute;//position absolute o elemento irá ter o tamanho do contéudo
+      top: 30px;
+      left: -150px;
+      text-align: right;
+      //  width: 8rem;
+      color: $font-color-gray;
+      font-size: 1.4rem;
+    }
+
+    &-titulo{
+      font-size: 1.8rem;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    &-texto{
+      font-size: 1.4rem;
+      line-height: 1.4;
+      color: $font-color-gray  ;
+    }
+
+    &-habilidades{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-content: start;
+
+      li{
+        font-size: 1.4rem;
+        line-height: 1.4;
+        border-radius: .4rem;
+        background: $font-white;
+        padding: .5rem 1rem;
+      }
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: -4px;
+      display: block;
+      width: .4rem;
+      height: 2rem;
+      background: $font-color-green-gradient;
+    }
+  }
+}
