@@ -1,7 +1,11 @@
 //Variables - colors and fonts
-$font-color: #141414;
+$bg-color: #000;
+$bg-formacao: #252525;
+$font-color-black: #141414;
 $font-color-gray: #525252;
+$font-color-formacao: #8f8f8f;
 $font-color-ligth-gray: #e0e0e0;
+$font-color-dark-gray: #a3a3a3;
 $font-color-white: #f5f5f5;
 $font-color-green-gradient: linear-gradient(#b6f829,#67dd0a);
 $font-white: #fff;
@@ -20,7 +24,8 @@ body{
   scroll-behavior: smooth;
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: $font-size;
-  color: $font-color;
+  background: $bg-color;
+  color: $font-color-white;
 }
 
 img{
@@ -34,6 +39,12 @@ img{
   text-transform: uppercase;
   word-break: break-all;
   max-width: 4ch;
+
+  @media (max-width: 80rem){
+    font-size: 4.8rem;
+    text-transform: capitalize;
+    max-width: initial !important;
+  }
 }
 
 //Mixins
@@ -42,4 +53,22 @@ img{
   padding: 4rem 2rem;
   margin: 0 auto;//alinha ao centro quando o width ultrapassar o max-width
   display: $display;
+}
+
+@mixin section-text($cor){
+  font-size: 2.4rem;
+  line-height: 1.33;
+  max-width:  40ch;
+  margin-bottom: 6rem;
+  color: $cor;
+}
+
+@mixin item-before($left){
+  content: '';
+  position: absolute;
+  left: $left;
+  display: block;
+  width: .4rem;
+  height: 2rem;
+  background: $font-color-green-gradient;
 }

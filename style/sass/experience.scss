@@ -4,18 +4,14 @@
   /*gap: 10rem;*/
 
   .subtitulo{
-    color: $font-color-ligth-gray;
+    color: $font-white;
   }
 
   .xp-text{
-    font-size: 2.4rem;
-    line-height: 1.33;
-    max-width:  40ch;
-    margin-bottom: 6rem;
-    color: $font-color-gray;
+    @include section-text($font-color-ligth-gray);
 
     strong{
-      color: $font-color;
+      color: $font-white;
     }
   }
 
@@ -35,7 +31,7 @@
       left: -150px;
       text-align: right;
       //  width: 8rem;
-      color: $font-color-gray;
+      color: $font-color-white;
       font-size: 1.4rem;
     }
 
@@ -43,6 +39,7 @@
       font-size: 1.8rem;
       line-height: 1.1;
       font-weight: 700;
+      color: $font-color-black;
     }
 
     &-texto{
@@ -61,20 +58,39 @@
         font-size: 1.4rem;
         line-height: 1.4;
         border-radius: .4rem;
-        background: $font-white;
+        background: $font-color-black;
         padding: .5rem 1rem;
       }
     }
 
     &::before{
-      content: '';
-      position: absolute;
+      @include item-before(-4px);
       top: 30px;
-      left: -4px;
-      display: block;
-      width: .4rem;
-      height: 2rem;
-      background: $font-color-green-gradient;
+    }
+
+    @media (max-width: 40rem){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 80rem){
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    .xp-text{
+      font-size: 2rem;
+    }
+
+    .empresa-ano{
+      position: initial;
+      order: 1; //ordem de exibição do item, se não tiver order o elemento por padrão é zero
+      width: initial;
+      text-align: left;
+      color: $font-color-gray;
+
+      &::before{
+        content: 'Período: ';
+      }
     }
   }
 }

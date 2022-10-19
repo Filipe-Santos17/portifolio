@@ -1,0 +1,129 @@
+.formacao {
+  background: $bg-formacao;
+
+  &-container {
+    @include display(grid);
+    grid-template-columns: 1fr 2fr;
+    gap: 10rem;
+
+    .subtitulo {
+      color: $font-white;
+    }
+
+    @media(max-width: 80rem){
+      grid-template-columns: 1fr;
+      padding: 2rem 1rem;
+      gap: 4rem;
+    }
+  }
+
+  &-texto {
+    @include section-text($font-color-dark-gray);
+
+    strong {
+      color: $font-white;
+    }
+
+    @media(max-width: 80rem){
+      font-size: 2rem;
+    }
+  }
+
+  .faculdade {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 6rem;
+    max-width: 20rem; //temporario
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      background: $bg-color;
+      padding: 2rem;
+      border-radius: .4rem;
+    }
+
+    &-tipo {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: $font-color-dark-gray;
+      margin-bottom: 1rem;
+    }
+
+    &-curso {
+      flex: 1;
+      font-size: 1.8rem;
+      line-height: 1.4;
+      margin-bottom: 4rem;
+      position: relative;
+
+      &::before {
+        @include item-before(-24px);
+      }
+    }
+
+    &-instituicao {
+      font-size: 1.8rem;
+      color: $font-color-dark-gray;
+    }
+  }
+
+  &-extra {
+    .cursos {
+      margin-bottom: 6rem;
+
+      h3::before {
+        background: url(../../img/cursos.svg) no-repeat center center;
+      }
+
+      li{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .idiomas {
+      h3::before {
+        background: url(../../img/idiomas.svg) no-repeat center center;
+      }
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      line-height: 1.4;
+      color: $font-color-formacao;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        left: -36px;
+        top: -4px;
+      }
+    }
+
+    li{
+      font-size: 1.8rem;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+    }
+
+    span{
+      color: $font-color-formacao;
+    }
+
+    @media(max-width: 80rem){
+      h3::before{
+        position: initial;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
