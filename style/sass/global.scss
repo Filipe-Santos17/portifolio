@@ -1,6 +1,4 @@
-:root {
-  --font-color: #141414;
-}
+$font-color: #141414;
 
 *{
   margin: 0;
@@ -13,10 +11,11 @@
 body{
   scroll-behavior: smooth;
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
+  font-size: 10px;
   color: var(--font-color);
 }
 
 img{
-  width: 100%;
+  max-width: 100%;
   display: block;
 }

@@ -1,0 +1,33 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 120rem;
+  margin: 0 auto;//alinha ao centro quando o width ultrapassar o max-width
+
+  .header-menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    a {
+      font-size: 1.8rem;
+      line-height: 1.3;
+      color: $font-color;
+      padding: 1rem 2rem; //Padding em links aumenta a aréa de clique
+    }
+  }
+
+  @media (max-width: 80rem) {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem;
+
+    .header-menu a {
+      background-color: #f5f5f5;
+      border-radius: .4rem;
+    }
+  }
+}
