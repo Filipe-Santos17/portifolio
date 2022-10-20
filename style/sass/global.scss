@@ -72,3 +72,12 @@ img{
   height: 2rem;
   background: $font-color-green-gradient;
 }
+
+@mixin form-padrao($border-r){
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  border-radius: $border-r;
+}

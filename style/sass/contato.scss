@@ -1,0 +1,52 @@
+.contato{
+  @include display(grid);
+  grid-template-columns: 1fr 2fr;
+  gap: 10rem;
+
+  .subtitulo{
+    color: $font-white;
+  }
+
+  @media(max-width: 80rem){
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    gap: 4rem;
+  }
+
+  .contato-text{
+    @include section-text($font-color-ligth-gray);
+  }
+
+  form.contact{
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+
+    label{
+      font-size: 2rem;
+    }
+
+    input{
+      @include form-padrao(5rem);
+    }
+
+    textarea{
+      @include form-padrao(1rem);
+      min-width: 100%;
+      min-height: 25rem;
+      max-width: 100%;
+      max-height: 25rem;
+    }
+
+    .btn{
+      @include form-padrao(5rem);
+      color: #fff;
+      background-color: #00A02D;
+      font-weight: 600;
+      line-height: 1.9rem;
+      cursor: pointer;
+      text-align: center;
+      max-width: 10rem;
+    }
+  }
+}
