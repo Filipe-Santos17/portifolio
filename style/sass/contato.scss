@@ -18,9 +18,12 @@
   }
 
   form.contact{
+    background: $bg-formacao;
     display: flex;
     flex-direction: column;
     max-width: 75%;
+    padding: 1rem;
+    border-radius: .5rem;
 
     label{
       font-size: 2rem;

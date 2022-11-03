@@ -1,7 +1,9 @@
+
 addEventListener('load', emailFunction)
 
 function emailFunction(){
-
+  const alertComp = document.querySelector(".alert")
+  const btnClose = alertComp.querySelector(".icon-close")
   const form = document.querySelector("[contact-form]")
   form.addEventListener("submit", sendEmail)
   
@@ -20,7 +22,18 @@ function emailFunction(){
     const template_Id = "template_nurcb83"
     
     emailjs.sendForm(service_Id, template_Id, form, public_key)
-    .then(alert("email send")) //Melhorar o alert
+    .then(
+      alertComp.classList.add("show"),
+      rbtn()
+    )
     .catch(error => console.log(`Error: ${error}`))
+    }
+    
+    btnClose.addEventListener("click", removeBtn)
+    
+  const rbtn = () => setTimeout(removeBtn, 5000)
+
+  function removeBtn(){
+    alertComp.classList.remove("show")
   }
 } 

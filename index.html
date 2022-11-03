@@ -12,6 +12,29 @@
   <script src="./email.js"></script>
 </head>
 <body>
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="checked" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></symbol>
+      <symbol id="XClose" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#fff" stroke-width="2" d="M3,3 L21,21 M3,21 L21,3"></path></symbol>
+    </defs>
+  </svg>
+  <div class="cont-center">
+    <div class="alert">
+      <span class="check">
+        <svg class="icon-alert">
+          <use xlink:href="#checked"></use>
+        </svg>
+      </span>
+      <span class="msg">Email enviado com sucesso</span>
+      <div class="close-alert">
+        <span>
+          <svg class="icon-close">
+            <use xlink:href="#XClose"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
   <header class="header">
     <img src="./img/logo.svg" alt="logo">
     <nav>
@@ -47,8 +70,7 @@
         <span class="empresa-ano">07/2022 - Atual</span>
         <h3 class="empresa-titulo">Novadata</h3>
         <span class="empresa-titulo">Desenvolvedor Júnior</span>
-        <p class="empresa-texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nam facere officia eos
-          culpa libero eaque incidunt pariatur quis ad?</p>
+        <p class="empresa-texto">Trabalhando como Front-End Entry Level nesta Startup, minha função é montar as páginas descritas no Figma Design usando código limpo, depurando, refatorando o código, tornando a página responsiva, criando e atualizando o código do design system.</p>
         <ul class="empresa-habilidades">
           <li>HTML</li>
           <li>CSS</li>
@@ -64,10 +86,9 @@
     <div class="formacao-container">
       <h2 class="subtitulo">Formação</h2>
       <div>
-        <p class="formacao-texto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed assumenda iste doloremque, pariatur ducimus
-          officia vitae aspernatur sint numquam quidem?
-        </p>
+        <!-- <p class="formacao-texto">
+          Aluno de Graduação na Faculdade Unijorge no curso de Engenharia da Computação.
+        </p> -->
         <ul class="faculdade">
           <li class="faculdade-item">
             <span class="faculdade-tipo">Graduação</span>
@@ -80,6 +101,7 @@
             <h3>Cursos Intensivos</h3>
             <ul>
               <li>Front End para Iniciantes <span>56 horas</span></li>
+              <li>IGTI React Bootcamp <span>80 horas</span></li>
             </ul>
           </div>
           <div class="idiomas">

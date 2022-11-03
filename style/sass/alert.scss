@@ -1,0 +1,53 @@
+.cont-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .alert {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background: #00aa00;
+    max-width: max-content;
+    max-height: 2rem;
+    top: 1rem;
+    position: fixed;
+    border-radius: .4rem;
+    border-left: .4rem solid #080;
+    border-right: .4rem solid #080;
+    z-index: 5;
+    opacity: 0;
+
+    .icon-alert {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .msg {
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    .icon-close{
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    &.show{
+      opacity: 1;
+    }
+  }
+}

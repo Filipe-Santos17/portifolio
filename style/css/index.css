@@ -380,9 +380,12 @@ main.introducao img {
   color: #e0e0e0;
 }
 .contato form.contact {
+  background: #252525;
   display: flex;
   flex-direction: column;
   max-width: 75%;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 .contato form.contact label {
   font-size: 2rem;
@@ -421,6 +424,52 @@ main.introducao img {
   cursor: pointer;
   text-align: center;
   max-width: 10rem;
+}
+
+.cont-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cont-center .alert {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background: #00aa00;
+  max-width: max-content;
+  max-height: 2rem;
+  top: 1rem;
+  position: fixed;
+  border-radius: 0.4rem;
+  border-left: 0.4rem solid #080;
+  border-right: 0.4rem solid #080;
+  z-index: 5;
+  opacity: 0;
+}
+.cont-center .alert .icon-alert {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.cont-center .alert .icon-alert svg {
+  width: 100%;
+  height: 100%;
+}
+.cont-center .alert .msg {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.cont-center .alert .icon-close {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.cont-center .alert .icon-close svg {
+  width: 100%;
+  height: 100%;
+}
+.cont-center .alert.show {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
